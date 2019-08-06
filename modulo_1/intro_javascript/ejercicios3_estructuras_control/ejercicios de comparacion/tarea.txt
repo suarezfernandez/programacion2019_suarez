@@ -1,0 +1,10 @@
+realizar los siguientes ejercicios
+
+1.hacer un programa que el usuario digite dos numeros y mostrar la suma y la resta de los mismos.
+
+2.hacer un programa que el usuario digite 2 numeros y mostrar las operaciones basicas(suma,resta,multiplicacion y division)
+multiplicacion y division)con un respectivo numero, ejemplo: 1suma. 2 resta....
+
+pedirle al usuario que digite que operacion desea hacer y mostrar el resultado. es decir, si el usuario digita 2 debe realizar la resta respectivamente.
+
+hacer 
