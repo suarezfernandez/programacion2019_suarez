@@ -103,11 +103,11 @@ do {
 
 } while( numero < 0 || numero % 2 === 1);
 */
-// validar que 2 contraseñas digitadas coincidan.
+/* validar que 2 contraseñas digitadas coincidan.
 
 do {
     var contraseña1 = prompt("Digite contraseña");
     var contraseña2 = prompt("Digite la confirmacion de la contraseña");
 
 }while(!(contraseña1 === contraseña2) );
-
+*/
