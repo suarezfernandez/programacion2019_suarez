@@ -5,8 +5,9 @@ var cliente = {
     nombre: "Suárez",
     apellido:"fernandez",
     edad:37,
-    balance: 1500,
-    pin: 1111
+    balance: 250000,
+    pin: 1111,
+    tipoCuenta: "debito"
     
 }
 // 0. Seleccionar idioma.
@@ -20,15 +21,16 @@ var tarjeta = prompt("Introduzca la  tarjeta por favor.");
 
 while (tarjeta.length !== 6 ) {
     tarjeta = prompt("Introduzca una tarjeta de 6 digitos");
+
 }
 // validar que la targeta indicada sea 4
 while(tarjeta !=cliente.tarjeta) {
-    tarjeta = prompt("tarjeta no encontrada.Intente de nuevo");
+   pin = prompt("tarjeta no encontrada.Intente de nuevo");
 }
 // 2.Digitar pin.
 var pin = prompt("Digitar su pin.");
-if (pin.length > 4) {
-    alert("pin invalido");
+while(pin.length !== 4) {
+    pin("pin invalido");
 }
 
 // 3.Mostrar opciones.
@@ -38,6 +40,15 @@ var opcion = prompt(`opciones a realizar
 2.Avance
 3.revisar balance
 4.Deposito.`);
+// validar que el usuario solo pueda digitar las opcion
+
+while (opcion > 4 || opcion < 1) {
+    opcion = prompt(`opcion validar.Elija opcion a realizar:
+    1.Retiro
+    2.Avance
+    3.Chequear balance
+    4.Deposito`);
+}
 
 // 4.Seleccionar tipo de cuenta.
  var tipoCuenta = prompt(`Seleccione el tipo de cuenta
@@ -74,4 +85,5 @@ alert("Retirar Dinero");
 
 
 // 10. mostrar mensaje " retire su targeta" y el usuario retira la targeta.
-alert("Retire su Tarjeta");
+alert(`"Retire su Tarjeta"`);
+

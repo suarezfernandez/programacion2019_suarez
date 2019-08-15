@@ -13,8 +13,8 @@ if (tarjeta.length > 12) {
 
 // 2.Digitar pin.
 var pin = prompt("Diditar su pin.");
-if (pin.length > 4) {
-    alert("pin invalido");
+while (pin.length !== 4) {
+   pin = prompt("Digite un PIN valido");
 }
 
 // 3.Mostrar opciones.
