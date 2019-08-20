@@ -14,9 +14,12 @@ var valor2 = parseInt(prompt("Digite el segundo  valor"));
 
 
 console.log(sumar(valor1, valor2) );
-*/
+/*
 
 var kilometros = parseInt(prompt("Digite los kilometros para llevarlos a metros"));
 
 var metros = kilometros * 1000;
 alert(`${kilometros}km seria ${metros}m`);
+
+*/
+
