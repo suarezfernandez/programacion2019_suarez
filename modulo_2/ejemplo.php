@@ -7,11 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-   
-
-  
-    <script src="funcion_suma.js"></script>
-  
-    
+    <h1>Soy PHP</h1>
 </body>
 </html>
