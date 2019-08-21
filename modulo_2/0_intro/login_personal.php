@@ -1,5 +1,5 @@
 
-
+<?php
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Login para 1 usuario</title>
@@ -14,13 +14,15 @@
     <p><h1>Luis Suarez</h1></p>
 
     <form class="container">
-        <div class="row" style="padding-left: 10px; padding-right: 700px; margin-left: 300px; margin-right: -500px;">
+    
             
             <div class="col" style="border: solid black 2px; margin-top: 200px; padding: 100px;">
                 <P>Nombre: <INPUT type=text name="login">
                     <P>Contraseña: <INPUT type=password name="password">
-                        <INPUT onclick=go() type=button value=Acceder>
+                    
+                         <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
+           
         </div>
     </form>
     <SCRIPT language=JavaScript>
@@ -31,8 +33,21 @@
                 alert("Porfavor ingrese, nombre de usuario y contraseña correctos.");
             }
         }
+
     </SCRIPT>
-    <FORM name=form action="TU_PAGINA_WEB.HTML">
+   if (isset($_GET)) {
+       $usuario = new stdClass();
+       $usuario->correo $_GET['email'];
+       $usuario->correo $_GET['password'];
+      
+      
+       {
+           
+       }
+       "
+      
+
+   }
 
 
 
@@ -40,3 +55,4 @@
 </body>
 
 </html>
+?>
