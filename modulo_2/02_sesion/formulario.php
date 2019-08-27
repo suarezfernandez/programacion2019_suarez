@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 ?>
 <!DOCTYPE html>
@@ -11,59 +13,49 @@
     <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-
     <div class="container">
+    <h1>Publicar</h1> 
         <div class="row">
-            <div class="col-md-5">
-            <h1>Publicar</h1>
+            <div class="col-md-6">
                 <form method="post">
                     <div class="form-group">
-                        <label for="text">Nombre: </label>
-                        <input type="text" class="form-control" name="nombre">
+                        <input type="text" name="nombre" id="" class="form-control" placeholder="Nombre de la publicación">
                     </div>
-                    
-                    <div class="form-froup">
-                        <label for="text">URL de la imagen</label>
-                        <input type="text" class="form-control" name="url">
-                    </div>
-                    
                     <div class="form-group">
-                        <button type="submit" class="btn btn-dark" name="guardar">Guardar públicacion</button>
+                        <input type="url" name="url" class="form-control" placeholder="URL de la imagen">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" name="guardar" class="btn btn-info">Guardar publicación</button>
                     </div>
                     <a href="listado.php">Ir al listado</a>
-                    
                 </form>
-                
-
-             
-
-                if (isset($_SESSION['guardar'])) {
-                    $_SECCION['publicaciones'] = [];
-
-                }
-
-                
-                if(isset($_POST['guardar'])) {
-
-                    $datos = new stdClass();
-                    $datos->nombre = $_POST['nombre'];
-                    $datos->url = $_POST['url'];
-
-                    echo "<pre>";
-                    print_r($datos);
-                    echo "</pre>";
-                }
-
-                    session_start();
-
-                    echo "<pre>";
-                    print_r($_SESSION);
-                    echo "</pre>";
-                
-                ?>
             </div>
         </div>
-    </div>
-    
+
+     <?php
+
+     
+        if (!isset($_SESSION['publicaciones'])) {
+            $_SESSION['publicaciones'] = [];
+        }
+
+        if (isset($_POST['guardar'])) {
+            $datos = new stdClass();
+            $datos->nombre = $_POST['nombre'];
+            $datos->url = $_POST['url'];
+
+            // Agregar los datos a la SESSION
+            $resultado = array_push($_SESSION['publicaciones'], $datos);
+
+            if ($resultado) {
+                echo "<p class='alert alert-success'>Se agregó</p>";
+            } else {
+                echo "<p class='alert alert-danger'>No se agregó</p>";
+            }
+        }
+        
+
+
+     ?>   
 </body>
 </html>
