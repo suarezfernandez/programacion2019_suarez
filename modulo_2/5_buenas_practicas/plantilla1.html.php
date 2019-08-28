@@ -4,5 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bienvenido a ola pollo</title>
+    <title><?php echo $nombreSitio; ?></title>
 </head>
+<body>
+    <h5><?=$mensaje ?></h5>
+   
+    <p><?= "Sitio wed creado por {$creadoPor} en {$anioCreacion}" ?></p>
+    
+</body>
+</html>
