@@ -14,7 +14,7 @@ $datos = $conexion->query($sql)->fetchAll();
 echo "<pre>";
 print_r($datos);
 echo "</pre>";
-*/
+*
 // Listar los nombres de los usuarios
 echo "<h1>Listado de Usuarios Registrados</h1>";
 echo "<ul>";

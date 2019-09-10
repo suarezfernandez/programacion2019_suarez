@@ -10,13 +10,13 @@ $sql = "CREATE TABLE usuario (
     
     PRIMARY KEY(id)
     )";
-/*
+*/
 $sql = 'INSERT INTO usuario
     (nombre, usuario, contrasena)
     VALUES
     ("jose", "nano", "cambi")
 ';
-
+/* 
 try {
 $conexion->exec($sql);
 } catch(PDOException $e) {
