@@ -10,8 +10,9 @@
 <body>
     <div class="container">
         <div class="row">
-            <h3 class="col-md-12">Lista de cartas
-                <a href=registro_cartas.php">registro_cartas</a>
+            <h3 class="col-md-12">
+                Lista de cartas
+                <a href="registro_cartas.php">Registrar cartas</a>
                 <hr>
             </h3>
 

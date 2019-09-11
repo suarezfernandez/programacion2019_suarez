@@ -9,6 +9,14 @@ if (isset($_POST['guardar'])) {
     $url = $_POST['link'];
     $precio =$_POST['price'];
 
+    //validaciones
+
+    if (empty($url)) {
+        throw new Exception("El link no puede estar vacio");
+    }
+    if (empty($precio)) {
+        throw new Exception("El link no puede estar vacio");
+    }
    var_dump($_POST);
 };
 

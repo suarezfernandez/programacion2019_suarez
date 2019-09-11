@@ -13,26 +13,27 @@
             <div class="col-md-5">
                 <!-- Formulario de Registro -->
                 <form method="post">
-                
                     <h3>Registro de Cartas</h3>
-                    <a href="lista_cartas.php">Ver lista de cartas </a>
+                    <a href="lista_cartas.php">Ver lista de cartas</a>
                     <hr>
+
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Nombre LAST">
-                    </div>
+                        <input type="text" name="name" class="form-control" placeholder="Nombre">
+                                            </div>
 
                     <div class="form-group">
                         <input type="url" name="link" class="form-control" placeholder="Link">
-                    </div>
+                                            </div>
 
                     <div class="form-group">
                         <input type="number" name="price" class="form-control" placeholder="Precio">
-                    </div>
+                                            </div>
 
                     <div class="form-group">
                         <button type="submit" name="guardar" class="btn btn-primary">Guardar</button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
