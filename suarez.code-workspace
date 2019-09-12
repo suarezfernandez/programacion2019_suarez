@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"editor.fontSize": 16,
+		"editor.multiCursorModifier": "ctrlCmd",
+		"php.validate.executablePath": "C:\\xampp\\php\\php.exe"
+	}
+}
