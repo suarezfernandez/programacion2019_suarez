@@ -3,7 +3,7 @@
 //Incluir la conexion
 require_once 'conexion.php';
 
-$sql = "SELECT id,name, link, price FROM registro_cartas";
+$sql = "SELECT id,name, link, price FROM registro_cartas ORDER BY id DESC";
 
 //Ejecutar el query y traer los datos
 $datos = $conexion->query($sql)->fetchAll();

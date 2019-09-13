@@ -13,7 +13,7 @@
             <div class="col-md-5">
                 <!-- Formulario de Registro -->
                 <form method="post">
-                    <h3>Registro de Cartas</h3>
+                    <h3>Registro de Articulos</h3>
                     <a href="lista_cartas.php">Ver lista de cartas</a>
                     <hr>
 
@@ -48,6 +48,13 @@
                         <button type="submit" name="guardar" class="btn btn-primary">Guardar</button>
                     </div>
                 </form>
+
+                <?php
+                if (isset($error)) {
+                    echo $error['mensaje'];
+                    
+                }
+                ?>
 
             </div>
         </div>
