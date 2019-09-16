@@ -28,22 +28,24 @@
                             <div class="card-body">
                                 <h5 class="card-title">'. $dato['name'] .'</h5>
                                 <p class="card-text text-success">$ '.$dato['price'].'</p>
+                                
                                 <a href="ver_carta.php?id='.$dato['id'].'" class="btn btn-primary">Ver carta</a>
+
+                                    <form method="post" action="borrar_carta.php">
+                                    <input type="hidden" name="id" value="'.$dato['id'].'">
+                                    <button class="btn btn-danger" name="borrar">Borrar</button>
+                                </form>
+
+
                             </div>
+
                         </div>';
                 }
 
            
             ?>
 
-            <div class="card col-md-3">
-                <img src="" alt="" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre</h5>
-                    <p class="card-text text-success">$ 1,000</p>
-                    <a href="#" class="btn btn-primary">Ver carta</a>
-                </div>
-            </div>
+         
 
         </div>
     </div>
