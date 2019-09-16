@@ -4,24 +4,24 @@ using System.Collections.Generic;
 using System.Text;
 namespace Lista_cartas
 {
-    #region Registro_cartas
-    public class Registro_cartas
+    #region Users
+    public class Users
     {
         #region Member Variables
         protected unknown _id;
         protected string _name;
-        protected string _link;
-        protected unknown _price;
-        protected bool _activo;
+        protected string _username;
+        protected string _password;
+        protected bool _active;
         #endregion
         #region Constructors
-        public Registro_cartas() { }
-        public Registro_cartas(string name, string link, unknown price, bool activo)
+        public Users() { }
+        public Users(string name, string username, string password, bool active)
         {
             this._name=name;
-            this._link=link;
-            this._price=price;
-            this._activo=activo;
+            this._username=username;
+            this._password=password;
+            this._active=active;
         }
         #endregion
         #region Public Properties
@@ -35,20 +35,20 @@ namespace Lista_cartas
             get {return _name;}
             set {_name=value;}
         }
-        public virtual string Link
+        public virtual string Username
         {
-            get {return _link;}
-            set {_link=value;}
+            get {return _username;}
+            set {_username=value;}
         }
-        public virtual unknown Price
+        public virtual string Password
         {
-            get {return _price;}
-            set {_price=value;}
+            get {return _password;}
+            set {_password=value;}
         }
-        public virtual bool Activo
+        public virtual bool Active
         {
-            get {return _activo;}
-            set {_activo=value;}
+            get {return _active;}
+            set {_active=value;}
         }
         #endregion
     }
