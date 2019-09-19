@@ -2,7 +2,7 @@
 
 try {
     $DB_HOST = "localhost";
-    $DB_NAME = "lista_cartas";
+    $DB_NAME = "registro_cartas";
     $DB_USER = "root";
     $DB_PASS = "";
     $config = [

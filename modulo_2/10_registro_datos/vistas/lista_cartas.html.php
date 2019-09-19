@@ -16,6 +16,8 @@
                 <hr>
             </h3>
 
+            
+
             <form class="col-md-12 mb-3">
                 <input type="search" name="busqueda" class="form-control">
                 <button type="submit"name="buscar" class="btn btn-outline-primary">Buscar</button>
