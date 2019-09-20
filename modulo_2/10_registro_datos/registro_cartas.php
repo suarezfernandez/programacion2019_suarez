@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+// Verificar si el usuario no esta logeado
+if (! isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit;
+}
+
 require_once 'conexion.php';
 
 try {
@@ -23,27 +31,32 @@ try {
         }
 
         if (intval($precio) < 15) {
-            throw new Exception("El precio no puede ser menor que 15", 4);
+            throw new Exception("El precio no puede ser menor que 15", 3);
         }
 
-        // Verificar que no exista en la base de datos 
-        $sql = "SELECT id, name FROM registro_cartas WHERE name LIKE '%nombre%'";
+        // Verificar que no exista en la base de datos
+        $sql = "SELECT id, name FROM cartas WHERE name LIKE '%$nombre%'";
+
         $datos2 = $conexion->query($sql)->fetchAll();
 
         if (count($datos2) > 0) {
-            throw new Exception("ya existe este nombre. Elija otro", 1);
+            throw new Exception("Ya existe este nombre. Elija otro", 1);
         }
 
+        $id_user = $_SESSION['id_user'];
+
         // Insertar     
-        $sql = "INSERT INTO registro_cartas
-                (name, link, price)
+        $sql = "INSERT INTO cartas
+                (name, link, price, created_by)
                 VALUES
-                (\"$nombre\", \"$url\", \"$precio\")";
+                (\"$nombre\", \"$url\", \"$precio\", $id_user)";
 
         $resultado = $conexion->exec($sql);
 
         if ($resultado) {
             $mensaje = "Se guardaron los datos";
+            // Limpiar el POST
+            $_POST = [];
         } else {
             $mensaje = "No se pudieron guardar los datos";
         }
@@ -52,7 +65,11 @@ try {
 
     }    
 
-} catch(Exception $e) {
+} 
+catch(PDOException $x) {
+    echo $x->getMessage();
+}
+catch(Exception $e) {
     
     $error = [
         'codigo' => $e->getCode(),

@@ -13,8 +13,7 @@
             <div class="col-md-5">
                 <!-- Formulario de Registro -->
                 <form method="post">
-                    <h3>Registro de Articulos</h3>
-                     <a href="logout.php">cerrar seccion</a>
+                    <h3>Registro de Cartas</h3>
                     <a href="lista_cartas.php">Ver lista de cartas</a>
                     <hr>
 
@@ -51,10 +50,9 @@
                 </form>
 
                 <?php
-                if (isset($error)) {
-                    echo $error['mensaje'];
-                    
-                }
+                    if (isset($error)) {
+                        echo $error['mensaje'];
+                    }
                 ?>
 
             </div>

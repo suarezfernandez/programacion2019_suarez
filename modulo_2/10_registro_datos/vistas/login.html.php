@@ -10,10 +10,11 @@
 <body>
 
     <form class="box" action="" method="post">
-        <h1>Login Suarez</h1>
+        <h1>Login</h1>
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" name="login" value="Login">
+        <a href="registro_usuarios.php" class="registro">Registrarse</a>
     </form>
     
 </body>
