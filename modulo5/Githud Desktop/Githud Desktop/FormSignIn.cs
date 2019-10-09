@@ -21,5 +21,20 @@ namespace Githud_Desktop
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // llamar el formulario FormConfigure
+            var formularioFormConfigure = new FormConfigure();
+
+            // mostrar el formulario
+            formularioFormConfigure.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

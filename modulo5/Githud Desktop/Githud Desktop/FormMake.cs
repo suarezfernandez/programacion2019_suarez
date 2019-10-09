@@ -21,5 +21,16 @@ namespace Githud_Desktop
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://desktop.github.com/usage-data");
+
+        }
     }
 }

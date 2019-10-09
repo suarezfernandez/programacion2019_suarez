@@ -31,5 +31,20 @@ namespace Githud_Desktop
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // llamar el formulario FormMake
+            var formularioFormMake = new FormMake();
+
+            // mostrar el formulario
+            formularioFormMake.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
