@@ -1,0 +1,12 @@
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\bin\Debug\Githud Desktop.exe.config
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\bin\Debug\Githud Desktop.exe
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\bin\Debug\Githud Desktop.pdb
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud Desktop.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud_Desktop.Form1.resources
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud_Desktop.Properties.Resources.resources
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud Desktop.csproj.GenerateResource.Cache
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud Desktop.exe
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud Desktop.pdb
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud_Desktop.FormConfigure.resources
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud_Desktop.FormMake.resources
+C:\xampp\htdocs\programacion2019_suarez\modulo5\Githud Desktop\Githud Desktop\obj\Debug\Githud_Desktop.FormSignIn.resources
