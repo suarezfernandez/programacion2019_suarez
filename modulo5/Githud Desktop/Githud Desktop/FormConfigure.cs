@@ -51,5 +51,14 @@ namespace Githud_Desktop
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            lblCommit.Text = txtName.Text + "commited 30 minutes ago";
+        }
     }
 }
