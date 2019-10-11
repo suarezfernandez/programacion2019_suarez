@@ -31,9 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMake));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.chkUsage = new System.Windows.Forms.CheckBox();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -58,35 +57,31 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Would you like to help us improve GitHub Desktop by periodically submitting ";
             // 
-            // label3
+            // chkUsage
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 258);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Yes, submit periodic usage stats";
+            this.chkUsage.AutoSize = true;
+            this.chkUsage.Location = new System.Drawing.Point(124, 258);
+            this.chkUsage.Name = "chkUsage";
+            this.chkUsage.Size = new System.Drawing.Size(177, 17);
+            this.chkUsage.TabIndex = 3;
+            this.chkUsage.Text = "Yes, submit periodic usage stats";
+            this.chkUsage.UseVisualStyleBackColor = true;
+            this.chkUsage.CheckedChanged += new System.EventHandler(this.chkUsage_CheckedChanged);
             // 
-            // checkBox1
+            // btnFinish
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(124, 258);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Fuchsia;
-            this.button1.Enabled = false;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(117, 289);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Finish";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFinish.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnFinish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFinish.Enabled = false;
+            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnFinish.Location = new System.Drawing.Point(117, 289);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(75, 23);
+            this.btnFinish.TabIndex = 4;
+            this.btnFinish.Text = "Finish";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // button2
             // 
@@ -132,9 +127,8 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnFinish);
+            this.Controls.Add(this.chkUsage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormMake";
@@ -149,9 +143,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkUsage;
+        private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;

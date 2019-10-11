@@ -32,5 +32,15 @@ namespace Githud_Desktop
             System.Diagnostics.Process.Start("https://desktop.github.com/usage-data");
 
         }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            btnFinish.Enabled = chkUsage.Checked;
+        }
+
+        private void chkUsage_CheckedChanged(object sender, EventArgs e)
+        {
+            btnFinish.Enabled = chkUsage.Checked;
+        }
     }
 }
