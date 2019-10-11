@@ -36,29 +36,36 @@ namespace objeto_movimiento
        
                
 
-            if (keyValue == 37)
+            if (keyValue == 38)
              {
               //  MessageBox.Show("Arriba");
-                label2.Location = new System.Drawing.Point(posicionX - 1, posicionY);
+                label2.Location = new System.Drawing.Point(posicionX , posicionY -1);
+                label3.Text = label2.Location.ToString();
+
 
              }
                 
         // Izquierda
-            if (keyValue == 38)
+            if (keyValue == 37)
             {
                // MessageBox.Show("Izquierda");
             }
-            label2.Location = new System.Drawing.Point(posicionY - 1, posicionX);
+            label2.Location = new System.Drawing.Point(posicionY + 1, posicionX);
+            label3.Text = label2.Location.ToString();
             
             if (keyValue == 39)
             {
                  //MessageBox.Show("Derecha");
             
             label2.Location = new System.Drawing.Point(posicionX + 1, posicionY);
+            label3.Text = label2.Location.ToString();
+
             }
                
             if (keyValue == 40)
             {
+                label2.Location = new System.Drawing.Point(posicionX , posicionY -1);
+                label3.Text = label2.Location.ToString();
                 //MessageBox.Show("Abajo");
             }
                 
