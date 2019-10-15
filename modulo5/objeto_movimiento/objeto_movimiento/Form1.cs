@@ -91,6 +91,9 @@ namespace objeto_movimiento
                 label2.BackColor = colores[numeroAleatorio];
           
                 // Colores en RGB
+                var red = random.Next(255);
+                var green = random.Next(255);
+                var blue = random.Next(255);
                 // label2.BackColor = Color.FromArgb(255, 0, 0);
 
                 label1.BackColor = Color.FromArgb(255, 0, 0);
