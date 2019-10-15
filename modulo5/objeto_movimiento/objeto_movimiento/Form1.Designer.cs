@@ -36,7 +36,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Aqua;
-            this.label1.ForeColor = System.Drawing.Color.Aqua;
+            this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(360, 400);
@@ -47,7 +47,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Fuchsia;
-            this.label2.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(175, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 30);

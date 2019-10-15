@@ -89,6 +89,12 @@ namespace objeto_movimiento
                 Color[] colores = {Color.Blue, Color.Red, Color.Green, Color.Pink, Color.SaddleBrown};
 
                 label2.BackColor = colores[numeroAleatorio];
+          
+                // Colores en RGB
+                // label2.BackColor = Color.FromArgb(255, 0, 0);
+
+                label1.BackColor = Color.FromArgb(255, 0, 0);
+
             }
 
             // Izquierda
