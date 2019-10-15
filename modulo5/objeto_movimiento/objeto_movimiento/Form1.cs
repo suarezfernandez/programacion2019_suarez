@@ -24,7 +24,7 @@ namespace objeto_movimiento
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            // Obtener el valor de la tecla
+          // Obtener el valor de la tecla
             var keyValue = e.KeyValue;
 
             var posicionX = label2.Location.X;
@@ -59,31 +59,42 @@ namespace objeto_movimiento
                 // CentroX
                 anchoPadre = this.Width;
                 anchoHijo = label2.Width;
-
-                centroX = (anchoPadre + anchoHijo) / 2;
-
+                
                 // CentroY
                 alturaPadre = this.Height;
                 alturaHijo = label2.Height;
 
-                centroY = (alturaPadre + alturaHijo) / 2;
+                // Bordes
+                var bordeX = 18;
+                var bordeY = 47;
+
+                centroX = (anchoPadre / 2) - (anchoHijo / 2) - bordeX;
+                centroY = (alturaPadre / 2 ) - (alturaHijo / 2) - bordeY;
 
                 // MessageBox.Show("Punto de inicio");
-                label2.Location = new System.Drawing.Point(centroX, centroY);
+                label1.Location = new System.Drawing.Point(centroX, centroY);
             }
 
             // Raimbow color
             if (keyValue == 67)
             {
-                MessageBox.Show("Color cambiado");
+                // MessageBox.Show("Color cambiado");
+
+                var random = new Random();
+
+                var numeroAleatorio = random.Next(0, 5);
+
+                // Listado de colores
+
+                Color[] colores = {Color.Blue, Color.Red, Color.Green, Color.Pink, Color.SaddleBrown};
+
+                label2.BackColor = colores[numeroAleatorio];
             }
 
             // Izquierda
-            if (keyValue == 37)
-            {
+            if (keyValue == 37) {
 
-                if (posicionX <= 12)
-                {
+                if (posicionX <= 12) {
                     return;
                 }
 
@@ -104,17 +115,16 @@ namespace objeto_movimiento
                 // MessageBox.Show("Flecha a la izquierda");
                 label2.Location = new System.Drawing.Point(posicionX - 3, posicionY);
                 label3.Text = label2.Location.ToString();
-            }
+            }  
 
             // Derecha
-            if (keyValue == 39)
-            {
+            if (keyValue == 39) {
 
                 if (posicionX >= 342)
                 {
                     return;
                 }
-
+                
                 // MessageBox.Show("Flecha a la derecha");
                 label2.Location = new System.Drawing.Point(posicionX + 1, posicionY);
                 label3.Text = label2.Location.ToString();
@@ -135,8 +145,7 @@ namespace objeto_movimiento
             }
 
             // Abajo
-            if (keyValue == 40)
-            {
+            if (keyValue == 40) {
 
                 if (posicionY >= 419)
                 {
@@ -163,8 +172,7 @@ namespace objeto_movimiento
             }
 
             // Arriba
-            if (keyValue == 38)
-            {
+            if (keyValue == 38) {
 
                 if (posicionY <= 19)
                 {
@@ -189,6 +197,7 @@ namespace objeto_movimiento
                 label2.Location = new System.Drawing.Point(posicionX, posicionY - 3);
                 label3.Text = label2.Location.ToString();
             }
+            
         
         }
 
@@ -208,6 +217,11 @@ namespace objeto_movimiento
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
