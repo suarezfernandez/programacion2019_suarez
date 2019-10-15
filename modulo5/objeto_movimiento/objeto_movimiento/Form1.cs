@@ -24,52 +24,171 @@ namespace objeto_movimiento
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            // Obtener el valor de la tecla
             var keyValue = e.KeyValue;
 
-          //  MessageBox.Show(keyValue.ToString());
             var posicionX = label2.Location.X;
             var posicionY = label2.Location.Y;
+            // MessageBox.Show(keyValue.ToString());
 
-           // MessageBox.Show(posicionX.ToString());
-            //MessageBox.Show(posicionY.ToString());
+            // MessageBox.Show( posicionX.ToString() );
+            // MessageBox.Show( posicionY.ToString() );
 
-       
-               
+            // label1.Location = new System.Drawing.Point(0, 0);
 
-            if (keyValue == 38)
-             {
-              //  MessageBox.Show("Arriba");
-                label2.Location = new System.Drawing.Point(posicionX , posicionY -1);
-                label3.Text = label2.Location.ToString();
+            // Reseteo
+            if (keyValue == 82)
+            {
+                // Centro relativo al padre
+                // CentroX
+                var anchoPadre = label1.Width;
+                var anchoHijo = label2.Width;
+                var margenX = label1.Location.X;
 
+                var centroX = ((anchoPadre + anchoHijo) / 2) - margenX;
 
-             }
-                
-        // Izquierda
+                // CentroY
+                var alturaPadre = label1.Height;
+                var alturaHijo = label2.Height;
+                var margenY = label1.Location.Y;
+
+                var centroY = ((alturaPadre + alturaHijo) / 2) - margenY;
+
+                // Centro absoluto (al formulario)
+
+                // CentroX
+                anchoPadre = this.Width;
+                anchoHijo = label2.Width;
+
+                centroX = (anchoPadre + anchoHijo) / 2;
+
+                // CentroY
+                alturaPadre = this.Height;
+                alturaHijo = label2.Height;
+
+                centroY = (alturaPadre + alturaHijo) / 2;
+
+                // MessageBox.Show("Punto de inicio");
+                label2.Location = new System.Drawing.Point(centroX, centroY);
+            }
+
+            // Raimbow color
+            if (keyValue == 67)
+            {
+                MessageBox.Show("Color cambiado");
+            }
+
+            // Izquierda
             if (keyValue == 37)
             {
-               // MessageBox.Show("Izquierda");
+
+                if (posicionX <= 12)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha a la izquierda");
+                label2.Location = new System.Drawing.Point(posicionX - 1, posicionY);
+                label3.Text = label2.Location.ToString();
             }
-            label2.Location = new System.Drawing.Point(posicionY + 1, posicionX);
-            label3.Text = label2.Location.ToString();
-            
+
+            // Izquierda A
+            if (keyValue == 65)
+            {
+
+                if (posicionX <= 12)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha a la izquierda");
+                label2.Location = new System.Drawing.Point(posicionX - 3, posicionY);
+                label3.Text = label2.Location.ToString();
+            }
+
+            // Derecha
             if (keyValue == 39)
             {
-                 //MessageBox.Show("Derecha");
-            
-            label2.Location = new System.Drawing.Point(posicionX + 1, posicionY);
-            label3.Text = label2.Location.ToString();
 
+                if (posicionX >= 342)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha a la derecha");
+                label2.Location = new System.Drawing.Point(posicionX + 1, posicionY);
+                label3.Text = label2.Location.ToString();
             }
-               
+
+            // Derecha D
+            if (keyValue == 68)
+            {
+
+                if (posicionX >= 342)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha a la derecha");
+                label2.Location = new System.Drawing.Point(posicionX + 3, posicionY);
+                label3.Text = label2.Location.ToString();
+            }
+
+            // Abajo
             if (keyValue == 40)
             {
-                label2.Location = new System.Drawing.Point(posicionX , posicionY -1);
-                label3.Text = label2.Location.ToString();
-                //MessageBox.Show("Abajo");
-            }
-                
 
+                if (posicionY >= 419)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha para abajo");
+                label2.Location = new System.Drawing.Point(posicionX, posicionY + 1);
+                label3.Text = label2.Location.ToString();
+            }
+
+            // Abajo S
+            if (keyValue == 83)
+            {
+
+                if (posicionY >= 419)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha para abajo");
+                label2.Location = new System.Drawing.Point(posicionX, posicionY + 3);
+                label3.Text = label2.Location.ToString();
+            }
+
+            // Arriba
+            if (keyValue == 38)
+            {
+
+                if (posicionY <= 19)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha para arriba");
+                label2.Location = new System.Drawing.Point(posicionX, posicionY - 1);
+                label3.Text = label2.Location.ToString();
+            }
+
+            // Arriba W
+            if (keyValue == 87)
+            {
+
+                if (posicionY <= 19)
+                {
+                    return;
+                }
+
+                // MessageBox.Show("Flecha para arriba");
+                label2.Location = new System.Drawing.Point(posicionX, posicionY - 3);
+                label3.Text = label2.Location.ToString();
+            }
         
         }
 
@@ -84,6 +203,11 @@ namespace objeto_movimiento
         }
 
         private void Form1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

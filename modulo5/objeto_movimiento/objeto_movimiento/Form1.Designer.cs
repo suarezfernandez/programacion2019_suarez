@@ -37,9 +37,9 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Aqua;
             this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(22, 24);
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 400);
+            this.label1.Size = new System.Drawing.Size(360, 400);
             this.label1.TabIndex = 0;
             this.label1.Text = "fondo";
             // 
@@ -47,21 +47,21 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Fuchsia;
             this.label2.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label2.Location = new System.Drawing.Point(193, 191);
+            this.label2.Location = new System.Drawing.Point(175, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "cuadrado";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.Fuchsia;
-            this.label3.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label3.Location = new System.Drawing.Point(179, 103);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(152, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 17);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "cuadrado";
+            this.label3.Text = "Coordenadas";
             // 
             // Form1
             // 
@@ -79,6 +79,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Form1_PreviewKeyDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
