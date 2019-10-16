@@ -12,6 +12,7 @@ namespace objeto_movimiento
 {
     public partial class Form1 : Form
     {
+        public bool mouseActivado = false;
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace objeto_movimiento
         {
 
         }
+         
+         
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -35,6 +38,15 @@ namespace objeto_movimiento
             // MessageBox.Show( posicionY.ToString() );
 
             // label1.Location = new System.Drawing.Point(0, 0);
+            // Cuando le de al sigo de + aumente de tamaño
+
+            if (keyValue == 107)
+            {
+                MessageBox.Show("Aumentar");
+
+            }
+
+           
 
             // Reseteo
             if (keyValue == 82)
@@ -205,7 +217,32 @@ namespace objeto_movimiento
                 // MessageBox.Show("Flecha para arriba");
                 label2.Location = new System.Drawing.Point(posicionX, posicionY - 3);
                 label3.Text = label2.Location.ToString();
+
+
             }
+
+            if (keyValue == 77)
+            {
+
+                // Si esta activo
+
+                if (mouseActivado)
+                {
+                    MessageBox.Show("Desactivando movimiento con el mouse");
+
+                    mouseActivado = false;
+                    lblFlag.Text = "Desactivad";
+                }
+                else
+                {
+                    MessageBox.Show("mover con el mouse");
+
+                    mouseActivado = true;
+                    lblFlag.Text = "Activado";
+                }
+
+            }
+                
             
         
         }
@@ -231,6 +268,36 @@ namespace objeto_movimiento
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            //MessageBox.Show("Te estas moviendo");
+
+            if (mouseActivado)
+            {
+                var locationX = e.Location.X;
+                var locationY = e.Location.Y;
+
+
+
+                label2.Location = new System.Drawing.Point(locationX, locationY);
+            }
+              
+        }
+
+        private void label2_MouseMove(object sender, MouseEventArgs e)
+        {
+            //MessageBox.Show("mone");
+
+           // var location = e.Location.Y;
+
+          //  System.Diagnostics.Trace.WriteLine(location); 
+        }
+
+        private void lblFlag_Click(object sender, EventArgs e)
         {
 
         }
